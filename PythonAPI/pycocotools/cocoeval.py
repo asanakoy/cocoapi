@@ -401,7 +401,7 @@ class COCOeval:
                         if nd:
                             recall[t,k,a,m] = rc[-1]
                         else:
-                            print(f'pycocotools::cocoeval: WARNING! no detections found for {p.catIds[k]}, area={p.areaRng[a]}, maxDets={p.maxDets[m]}, iouThr={p.iouThr[t]}')
+                            print(f'pycocotools::cocoeval: WARNING! no detections found for {p.catIds[k]}, area={p.areaRng[a]}, maxDets={p.maxDets[m]}, iouThr={p.iouThrs[t]}')
                             recall[t,k,a,m] = 0
 
                         # numpy is slow without cython optimization for accessing elements
